@@ -45,12 +45,22 @@ class MasterViewController: UITableViewController {
         // Create a PHFetchResult object for each section in the table view.
         let allPhotosOptions = PHFetchOptions()
         allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
-        allPhotos = PHAsset.fetchAssets(with: allPhotosOptions)
-        smartAlbums = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .albumRegular, options: nil)
+//        allPhotos = PHAsset.fetchAssets(with: allPhotosOptions)
+        smartAlbums = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumScreenshots, options: nil)
         userCollections = PHCollectionList.fetchTopLevelUserCollections(with: nil)
 
         // To get updated content for a fetch, register a change observer with the shared PHPhotoLibrary object.
         PHPhotoLibrary.shared().register(self)
+
+
+        let screenshotCollection = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumScreenshots, options: nil).firstObject
+
+        let options = PHFetchOptions()
+        options.wantsIncrementalChangeDetails = true
+        options.predicate = NSPredicate(format: "creationDate > %@", NSDate().addingTimeInterval(-30))
+        allPhotos = PHAsset.fetchAssets(in: screenshotCollection!, options: options)
+//        let screenshots = PHAsset.fetchAssets(in: screenshotCollection!, options: options)
+        print()
 
     }
 
