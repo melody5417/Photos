@@ -8,21 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		4F0037D42062512E001763CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0037D32062512E001763CD /* AppDelegate.swift */; };
-		4F0037D62062512E001763CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0037D52062512E001763CD /* ViewController.swift */; };
-		4F0037D92062512E001763CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0037D72062512E001763CD /* Main.storyboard */; };
 		4F0037DB2062512F001763CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0037DA2062512F001763CD /* Assets.xcassets */; };
 		4F0037DE2062512F001763CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0037DC2062512F001763CD /* LaunchScreen.storyboard */; };
+		4F0037E82062562A001763CD /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0037E72062562A001763CD /* MasterViewController.swift */; };
+		4F0037EA20634107001763CD /* AssetGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0037E920634107001763CD /* AssetGridViewController.swift */; };
+		4FAECE112063EBDA00BD16EB /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAECE102063EBDA00BD16EB /* GridViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F0037D02062512E001763CD /* LearnPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0037D32062512E001763CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F0037D52062512E001763CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4F0037D82062512E001763CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F0037DA2062512F001763CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F0037DD2062512F001763CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F0037DF2062512F001763CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F0037E520625163001763CD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4F0037E72062562A001763CD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		4F0037E920634107001763CD /* AssetGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetGridViewController.swift; sourceTree = "<group>"; };
+		4FAECE102063EBDA00BD16EB /* GridViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +59,12 @@
 			isa = PBXGroup;
 			children = (
 				4F0037D32062512E001763CD /* AppDelegate.swift */,
-				4F0037D52062512E001763CD /* ViewController.swift */,
-				4F0037D72062512E001763CD /* Main.storyboard */,
+				4F0037E72062562A001763CD /* MasterViewController.swift */,
 				4F0037DA2062512F001763CD /* Assets.xcassets */,
 				4F0037DC2062512F001763CD /* LaunchScreen.storyboard */,
 				4F0037DF2062512F001763CD /* Info.plist */,
+				4F0037E920634107001763CD /* AssetGridViewController.swift */,
+				4FAECE102063EBDA00BD16EB /* GridViewCell.swift */,
 			);
 			path = LearnPhotos;
 			sourceTree = "<group>";
@@ -92,16 +95,16 @@
 		4F0037C82062512E001763CD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
 				TargetAttributes = {
 					4F0037CF2062512E001763CD = {
-						CreatedOnToolsVersion = 9.3;
+						CreatedOnToolsVersion = 9.2;
 					};
 				};
 			};
 			buildConfigurationList = 4F0037CB2062512E001763CD /* Build configuration list for PBXProject "LearnPhotos" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 9.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -125,7 +128,6 @@
 			files = (
 				4F0037DE2062512F001763CD /* LaunchScreen.storyboard in Resources */,
 				4F0037DB2062512F001763CD /* Assets.xcassets in Resources */,
-				4F0037D92062512E001763CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F0037D62062512E001763CD /* ViewController.swift in Sources */,
+				4F0037EA20634107001763CD /* AssetGridViewController.swift in Sources */,
+				4F0037E82062562A001763CD /* MasterViewController.swift in Sources */,
+				4FAECE112063EBDA00BD16EB /* GridViewCell.swift in Sources */,
 				4F0037D42062512E001763CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,14 +148,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4F0037D72062512E001763CD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F0037D82062512E001763CD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4F0037DC2062512F001763CD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -198,6 +194,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_COMPATIBILITY_VERSION = "Xcode 8.0";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -258,6 +255,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = "Xcode 8.0";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -283,6 +281,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73337P6T5A;
+				DYLIB_COMPATIBILITY_VERSION = "Xcode 8.0";
 				INFOPLIST_FILE = LearnPhotos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,6 +300,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73337P6T5A;
+				DYLIB_COMPATIBILITY_VERSION = "Xcode 8.0";
 				INFOPLIST_FILE = LearnPhotos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
