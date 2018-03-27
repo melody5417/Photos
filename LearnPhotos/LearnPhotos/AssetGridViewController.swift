@@ -36,7 +36,7 @@ class AssetGridViewController: UICollectionViewController {
 
         collectionView?.register(GridViewCell.self, forCellWithReuseIdentifier: String(describing: GridViewCell.self))
         collectionView?.backgroundColor = .white
-
+        
         resetCachedAssets()
         PHPhotoLibrary.shared().register(self)
     }
@@ -48,6 +48,7 @@ class AssetGridViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        // Add button to the navigation bar if the asset collection supports adding content.
         if assetCollection == nil || assetCollection.canPerform(.addContent) {
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(self.addAsset(_:)))
         } else {
@@ -68,10 +69,6 @@ class AssetGridViewController: UICollectionViewController {
 
         updateCachedAssets()
     }
-
-    // MARK:
-
-
 
     // MARK:
 
@@ -277,6 +274,8 @@ extension AssetGridViewController {
 
         return cell
     }
+
+    // UIScrollView
 
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateCachedAssets()

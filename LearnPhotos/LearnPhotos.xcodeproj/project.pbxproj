@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B518C0FFEAA8C76A4994052 /* Pods_LearnPhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C0E78EBB08F2BA4BE721AA /* Pods_LearnPhotos.framework */; };
 		4F0037D42062512E001763CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0037D32062512E001763CD /* AppDelegate.swift */; };
 		4F0037DB2062512F001763CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0037DA2062512F001763CD /* Assets.xcassets */; };
 		4F0037DE2062512F001763CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0037DC2062512F001763CD /* LaunchScreen.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0044F867BB31C3DB1FB60758 /* Pods-LearnPhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnPhotos.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnPhotos/Pods-LearnPhotos.release.xcconfig"; sourceTree = "<group>"; };
+		4223F15FCCB0962806A77865 /* Pods-LearnPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnPhotos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnPhotos/Pods-LearnPhotos.debug.xcconfig"; sourceTree = "<group>"; };
 		4F0037D02062512E001763CD /* LearnPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0037D32062512E001763CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F0037DA2062512F001763CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -25,6 +28,7 @@
 		4F0037E72062562A001763CD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		4F0037E920634107001763CD /* AssetGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetGridViewController.swift; sourceTree = "<group>"; };
 		4FAECE102063EBDA00BD16EB /* GridViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
+		F7C0E78EBB08F2BA4BE721AA /* Pods_LearnPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,18 +36,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B518C0FFEAA8C76A4994052 /* Pods_LearnPhotos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30D727E575AEBDCFA6D21917 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4223F15FCCB0962806A77865 /* Pods-LearnPhotos.debug.xcconfig */,
+				0044F867BB31C3DB1FB60758 /* Pods-LearnPhotos.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4F0037C72062512E001763CD = {
 			isa = PBXGroup;
 			children = (
 				4F0037E520625163001763CD /* README.md */,
 				4F0037D22062512E001763CD /* LearnPhotos */,
 				4F0037D12062512E001763CD /* Products */,
+				30D727E575AEBDCFA6D21917 /* Pods */,
+				55843F6EF9A7C534BC381E6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +85,14 @@
 			path = LearnPhotos;
 			sourceTree = "<group>";
 		};
+		55843F6EF9A7C534BC381E6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7C0E78EBB08F2BA4BE721AA /* Pods_LearnPhotos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F0037E22062512F001763CD /* Build configuration list for PBXNativeTarget "LearnPhotos" */;
 			buildPhases = (
+				4430CA67AF85D5C8C2BFFF36 /* [CP] Check Pods Manifest.lock */,
 				4F0037CC2062512E001763CD /* Sources */,
 				4F0037CD2062512E001763CD /* Frameworks */,
 				4F0037CE2062512E001763CD /* Resources */,
+				9CF984C65A3A6A99E0A42298 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,7 +122,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				TargetAttributes = {
 					4F0037CF2062512E001763CD = {
 						CreatedOnToolsVersion = 9.2;
@@ -104,7 +130,7 @@
 				};
 			};
 			buildConfigurationList = 4F0037CB2062512E001763CD /* Build configuration list for PBXProject "LearnPhotos" */;
-			compatibilityVersion = "Xcode 9.2";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -132,6 +158,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4430CA67AF85D5C8C2BFFF36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearnPhotos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CF984C65A3A6A99E0A42298 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LearnPhotos/Pods-LearnPhotos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LearnPhotos/Pods-LearnPhotos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4F0037CC2062512E001763CD /* Sources */ = {
@@ -270,13 +337,14 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		4F0037E32062512F001763CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4223F15FCCB0962806A77865 /* Pods-LearnPhotos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +364,7 @@
 		};
 		4F0037E42062512F001763CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0044F867BB31C3DB1FB60758 /* Pods-LearnPhotos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

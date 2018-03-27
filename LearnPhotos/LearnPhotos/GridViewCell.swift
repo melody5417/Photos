@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class GridViewCell: UICollectionViewCell {
 
@@ -26,6 +27,8 @@ class GridViewCell: UICollectionViewCell {
         }
     }
 
+    // MARK: Life cycle
+
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -40,9 +43,14 @@ class GridViewCell: UICollectionViewCell {
 
     private func initUI() {
         contentView.addSubview(imageView)
-        imageView.bounds = self.bounds
+        imageView.snp.makeConstraints { (make) in
+            make.top.left.bottom.right.equalToSuperview()
+        }
         contentView.addSubview(livePhotoBadgeImageView)
-        livePhotoBadgeImageView.bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: 28, height: 28))
+        livePhotoBadgeImageView.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 28, height: 28))
+            make.top.left.equalToSuperview()
+        }
     }
 
     override func prepareForReuse() {
