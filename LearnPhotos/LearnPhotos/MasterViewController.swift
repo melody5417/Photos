@@ -8,6 +8,7 @@
 import UIKit
 import Photos
 
+//
 class MasterViewController: UITableViewController {
 
     // MARK: Types for managing sections, cell and segue identifiers

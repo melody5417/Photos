@@ -275,6 +275,15 @@ extension AssetGridViewController {
         return cell
     }
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let asset = fetchResult.object(at: indexPath.item)
+        let assetViewController = AssetViewController()
+        assetViewController.asset = asset
+        assetViewController.assetCollection = assetCollection
+
+        navigationController?.pushViewController(assetViewController, animated: true)
+    }
+
     // UIScrollView
 
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
