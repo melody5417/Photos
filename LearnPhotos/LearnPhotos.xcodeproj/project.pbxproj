@@ -14,6 +14,8 @@
 		4F0037E82062562A001763CD /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0037E72062562A001763CD /* MasterViewController.swift */; };
 		4F0037EA20634107001763CD /* AssetGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0037E920634107001763CD /* AssetGridViewController.swift */; };
 		4F04ADF3206A01F200E27FB8 /* AssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04ADF2206A01F200E27FB8 /* AssetViewController.swift */; };
+		4F830A7A206B28BD00A2EBB1 /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F830A79206B28BD00A2EBB1 /* AnimatedImage.swift */; };
+		4F830A7C206B438600A2EBB1 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F830A7B206B438600A2EBB1 /* AnimatedImageView.swift */; };
 		4FAECE112063EBDA00BD16EB /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAECE102063EBDA00BD16EB /* GridViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		4F0037E72062562A001763CD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		4F0037E920634107001763CD /* AssetGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetGridViewController.swift; sourceTree = "<group>"; };
 		4F04ADF2206A01F200E27FB8 /* AssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetViewController.swift; sourceTree = "<group>"; };
+		4F830A79206B28BD00A2EBB1 /* AnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImage.swift; sourceTree = "<group>"; };
+		4F830A7B206B438600A2EBB1 /* AnimatedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
 		4FAECE102063EBDA00BD16EB /* GridViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
 		F7C0E78EBB08F2BA4BE721AA /* Pods_LearnPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +88,8 @@
 				4F0037E920634107001763CD /* AssetGridViewController.swift */,
 				4FAECE102063EBDA00BD16EB /* GridViewCell.swift */,
 				4F04ADF2206A01F200E27FB8 /* AssetViewController.swift */,
+				4F830A79206B28BD00A2EBB1 /* AnimatedImage.swift */,
+				4F830A7B206B438600A2EBB1 /* AnimatedImageView.swift */,
 			);
 			path = LearnPhotos;
 			sourceTree = "<group>";
@@ -210,9 +216,11 @@
 			files = (
 				4F0037EA20634107001763CD /* AssetGridViewController.swift in Sources */,
 				4F0037E82062562A001763CD /* MasterViewController.swift in Sources */,
+				4F830A7A206B28BD00A2EBB1 /* AnimatedImage.swift in Sources */,
 				4F04ADF3206A01F200E27FB8 /* AssetViewController.swift in Sources */,
 				4FAECE112063EBDA00BD16EB /* GridViewCell.swift in Sources */,
 				4F0037D42062512E001763CD /* AppDelegate.swift in Sources */,
+				4F830A7C206B438600A2EBB1 /* AnimatedImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

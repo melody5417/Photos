@@ -15,6 +15,8 @@ class AssetViewController: UIViewController {
     var asset: PHAsset!
     var assetCollection: PHAssetCollection!
 
+    fileprivate var isPlayingHint = false
+
     // MARK: Life Cycle
 
     override func viewDidLoad() {
@@ -31,6 +33,7 @@ class AssetViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        // Make sure the view layout happends before requesting an image sized to fit the view.
         view.layoutIfNeeded()
         updateContent()
     }
@@ -44,6 +47,15 @@ class AssetViewController: UIViewController {
         imageView.snp.makeConstraints { (make) in
             make.top.left.bottom.right.equalToSuperview()
         }
+
+        livePhotoView.delegate = self
+        view.addSubview(livePhotoView)
+        livePhotoView.snp.makeConstraints { (make) in
+            make.top.left.bottom.right.equalToSuperview()
+        }
+
+        livePhotoView.isHidden = true
+
     }
 
     // MARK: Image Display
@@ -58,6 +70,8 @@ class AssetViewController: UIViewController {
         switch self.asset.playbackStyle {
         case .image:
             updateStillImage()
+        case .livePhoto:
+            updateLivePhoto()
         default:
             print()
         }
@@ -78,11 +92,40 @@ class AssetViewController: UIViewController {
         }
     }
 
+    private func updateLivePhoto() {
+        // Prepare the options to pass when fetching the live photo
+        let options = PHLivePhotoRequestOptions()
+        options.deliveryMode = .highQualityFormat
+        options.isNetworkAccessAllowed = true
+        PHImageManager.default().requestLivePhoto(for: asset,
+                                                  targetSize: targetSize,
+                                                  contentMode: PHImageContentMode.aspectFit,
+                                                  options: options) { (livePhoto, info) in
+            // If successful, show the live photo view and display the live photo
+            guard let livePhoto = livePhoto else { return }
+
+            // Now that we have the live photo, show it
+            self.imageView.isHidden = true
+            self.livePhotoView.isHidden = false
+            self.livePhotoView.livePhoto = livePhoto
+
+            if !self.isPlayingHint {
+                self.isPlayingHint = true
+                self.livePhotoView.startPlayback(with: .hint)
+            }
+        }
+    }
+
     // MARK: Properties
 
     let imageView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
+        return view
+    }()
+
+    let livePhotoView: PHLivePhotoView = {
+        let view = PHLivePhotoView()
         return view
     }()
 }
@@ -93,4 +136,15 @@ extension AssetViewController: PHPhotoLibraryChangeObserver {
 
     }
 
+}
+
+extension AssetViewController: PHLivePhotoViewDelegate {
+
+    func livePhotoView(_ livePhotoView: PHLivePhotoView, didEndPlaybackWith playbackStyle: PHLivePhotoViewPlaybackStyle) {
+        isPlayingHint = (playbackStyle == .hint)
+    }
+
+    func livePhotoView(_ livePhotoView: PHLivePhotoView, willBeginPlaybackWith playbackStyle: PHLivePhotoViewPlaybackStyle) {
+        isPlayingHint = (playbackStyle == .hint)
+    }
 }
