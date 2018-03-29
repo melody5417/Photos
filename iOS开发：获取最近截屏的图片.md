@@ -6,18 +6,19 @@
 ## 预研
 这个需求具体是这样：
 
-1. 当用户进入App主界面时，检测到30s内有截屏操作，进行图片快捷提示（样式可参考微信发送图片的快捷提示）。
+1. 当用户进入App主界面时，检测到30s内有截屏操作，进行图片快捷提示（样式可参考微信发送图片的快捷提示![](https://github.com/melody5417/Photos/blob/master/Resources/wechatDemo.jpg)）。
 2. 若用户未点击提示，3s自动消失。
 
 如前言所说，我最开始被截屏这个操作误导，去调研截屏相关的知识。了解到有用户按下 Home 和 Lock 截屏的通知： **UIApplicationUserDidTakeScreenshotNotification**，以为监听该通知就可以了。但是这个需求的应用场景是：用户在我们的App处于后台的情况下截屏，App处于后台根本无法收到该通知了。所以这个思路肯定不对。
 
-仔细体验了微信的发送图片提示功能后，确定微信的实现原理应该和截屏没有一毛钱关系！应该是当用户点击➕按钮时，去检索了截屏相册的图片，获取一定时间内最新添加的截屏图片。明白这个原理就OK了。
+仔细体验了微信的发送图片提示功能后，确定微信的实现原理应该和截屏没有一毛钱关系！应该是当用户点击![](https://github.com/melody5417/Photos/blob/master/Resources/wechatSendButton.jpg)按钮时，去检索了截屏相册的图片，获取一定时间内最新添加的截屏图片。明白这个原理就OK了。
 
 ## 代码
 1. 获取相册权限
 
 	Info.plist 添加 Key: **NSPhotoLibraryUsageDescription**。 App启动后首次访问相册等操作 会呼出如下图的 申请权限 弹窗，用户确认后才能获得权限访问相册。
-	//todo yiqi
+	
+	![申请权限](https://github.com/melody5417/Photos/blob/master/Resources/requestPermission.jpg)
 
 2. 校验权限
 
