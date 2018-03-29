@@ -17,6 +17,9 @@
 		4F830A7A206B28BD00A2EBB1 /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F830A79206B28BD00A2EBB1 /* AnimatedImage.swift */; };
 		4F830A7C206B438600A2EBB1 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F830A7B206B438600A2EBB1 /* AnimatedImageView.swift */; };
 		4FAECE112063EBDA00BD16EB /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAECE102063EBDA00BD16EB /* GridViewCell.swift */; };
+		4FD0CDE6206CA5740064495C /* UIColor+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD0CDE5206CA5740064495C /* UIColor+Util.swift */; };
+		4FFBEEBA206C9242008911BF /* PhotoPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFBEEB9206C9242008911BF /* PhotoPermissionManager.swift */; };
+		4FFBEEBC206C9379008911BF /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFBEEBB206C9379008911BF /* PermissionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		4F830A79206B28BD00A2EBB1 /* AnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImage.swift; sourceTree = "<group>"; };
 		4F830A7B206B438600A2EBB1 /* AnimatedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
 		4FAECE102063EBDA00BD16EB /* GridViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
+		4FD0CDE5206CA5740064495C /* UIColor+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Util.swift"; sourceTree = "<group>"; };
+		4FFBEEB9206C9242008911BF /* PhotoPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPermissionManager.swift; sourceTree = "<group>"; };
+		4FFBEEBB206C9379008911BF /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		F7C0E78EBB08F2BA4BE721AA /* Pods_LearnPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,6 +96,9 @@
 				4F04ADF2206A01F200E27FB8 /* AssetViewController.swift */,
 				4F830A79206B28BD00A2EBB1 /* AnimatedImage.swift */,
 				4F830A7B206B438600A2EBB1 /* AnimatedImageView.swift */,
+				4FFBEEB9206C9242008911BF /* PhotoPermissionManager.swift */,
+				4FFBEEBB206C9379008911BF /* PermissionViewController.swift */,
+				4FD0CDE5206CA5740064495C /* UIColor+Util.swift */,
 			);
 			path = LearnPhotos;
 			sourceTree = "<group>";
@@ -215,10 +224,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F0037EA20634107001763CD /* AssetGridViewController.swift in Sources */,
+				4FD0CDE6206CA5740064495C /* UIColor+Util.swift in Sources */,
+				4FFBEEBC206C9379008911BF /* PermissionViewController.swift in Sources */,
 				4F0037E82062562A001763CD /* MasterViewController.swift in Sources */,
 				4F830A7A206B28BD00A2EBB1 /* AnimatedImage.swift in Sources */,
 				4F04ADF3206A01F200E27FB8 /* AssetViewController.swift in Sources */,
 				4FAECE112063EBDA00BD16EB /* GridViewCell.swift in Sources */,
+				4FFBEEBA206C9242008911BF /* PhotoPermissionManager.swift in Sources */,
 				4F0037D42062512E001763CD /* AppDelegate.swift in Sources */,
 				4F830A7C206B438600A2EBB1 /* AnimatedImageView.swift in Sources */,
 			);
@@ -290,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -345,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

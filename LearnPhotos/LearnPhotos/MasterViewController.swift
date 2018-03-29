@@ -37,6 +37,13 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        PhotoPermissionManager.requestPermission { (status) in
+            if status == false {
+                
+            }
+
+        }
+
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAlbum(_:)))
         navigationItem.rightBarButtonItem = addButton
 
